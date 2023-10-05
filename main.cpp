@@ -37,7 +37,7 @@ int main(int argc, char* argv[]) {
         	std::cerr << "Invalid input format. Please use the format 'ElementSymbolMassNumber', e.g., 'Na21'." << std::endl;
     	}
 
-		cout << "Enter Charge State: ";
+		cout << "Enter selected charge state: ";
         cin >> fQ;
 
 		TFile *outfile = new TFile("output.root","RECREATE");
@@ -84,14 +84,14 @@ int main(int argc, char* argv[]) {
         	std::cerr << "Invalid input format. Please use the format 'ElementSymbolMassNumber', e.g., 'Na21'." << std::endl;
     	}
 
-		cout << "Enter Charge State: ";
+		cout << "Enter selected charge state: ";
         cin >> fQ;
-		cout << "Enter NMR1 Field: ";
+		cout << "Enter NMR1 Field (Gauss): ";
         cin >> fB;
 
         // Perform calculations using num1, num2, and num3
         fEnergy = GetEnergy(fA,fQ,fB);
-        cout << "Energy = " << fEnergy << " keV/u" << endl;
+        cout << "Beam Energy = " << fEnergy << " keV/u" << endl;
 
     } else {
         cout << "Invalid arguments. Usage:" << endl;
